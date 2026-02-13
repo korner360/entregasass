@@ -451,6 +451,9 @@ button:hover,
   line-height: 1.6;
 }
 
+/* // acaba card-paquetes*/
+/* nuevos css precios */
+/* //termina nuevo css precios */
 /*
 .bg-red {
   background-color: red;
@@ -485,6 +488,27 @@ button:hover,
   color: #8d27f4;
   font-size: 1.6em;
   text-wrap: wrap;
+}
+
+.card-body img {
+  border-radius: 16px;
+}
+
+.badge {
+  position: relative;
+  left: 10%;
+  transform: translateX(-50%);
+  background: #ffffff !important;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.btn-primary {
+  --bs-btn-color: variables.$blanco;
+  --bs-btn-bg: variables.$color-primario;
+  --bs-btn-border-color: variables.$color-primario;
 }
 
 /* Header BS */

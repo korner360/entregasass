@@ -451,6 +451,9 @@ button:hover,
   line-height: 1.6;
 }
 
+/* // acaba card-paquetes*/
+/* nuevos css precios */
+/* //termina nuevo css precios */
 /*
 .bg-red {
   background-color: red;
@@ -465,26 +468,56 @@ button:hover,
 }
 */
 .carrubg1 {
-  background-image: url(../assets/img/ch-fondo-01.jpg);
+  background-image: url(../assets/img/beneficios-planea-digital-para-tu-empresa_01.jpg);
 }
 
 .carrubg2 {
-  background-image: url(../assets/img/ch-fondo-02.jpg);
+  background-image: url(../assets/img/beneficios-planea-digital-para-tu-empresa_02.jpg);
 }
 
+/*
 .carrubg3 {
-  background-image: url(../assets/img/ch-fondo-03.jpg);
-}
-
+    background-image: url(../assets/img/ch-fondo-03.jpg);
+}*/
 .carrubgsize {
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 16px;
+  min-height: 450px;
 }
 
 .card-title {
   color: #8d27f4;
   font-size: 1.6em;
   text-wrap: wrap;
+}
+
+.card-img-top {
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+
+.badge {
+  position: relative;
+  left: 20%;
+  transform: translateX(-50%);
+  background: #8d27f4 !important;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #8d27f4;
+  --bs-btn-border-color:#8d27f4;
+}
+
+.btn-primary:hover {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #333;
+  --bs-btn-border-color:#333;
 }
 
 /* Header BS */
@@ -580,6 +613,115 @@ button:hover,
 }
 
 /* //termina proyectos CSS*/
+/* Proyectos destacados homne */
+.proyectos-destacados {
+  padding: 80px;
+  background-color: #000000;
+}
+.proyectos-destacados .proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 40px 0;
+}
+@media (max-width: 768px) {
+  .proyectos-destacados .proyectos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.proyectos-destacados .proyecto-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  aspect-ratio: 16/9;
+}
+.proyectos-destacados .proyecto-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.proyectos-destacados .proyecto-card:hover img {
+  transform: scale(1.1);
+}
+.proyectos-destacados .proyecto-card .proyecto-info {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  width: 100%;
+}
+.proyectos-destacados .proyecto-card .proyecto-info h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+.proyectos-destacados .proyectos-footer {
+  text-align: center;
+  margin-top: 50px;
+}
+.proyectos-destacados .proyectos-footer .btn-primario {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #8d27f4;
+  color: #ffffff;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.proyectos-destacados .proyectos-footer .btn-primario:hover {
+  background-color: #a855f7;
+}
+
+/* //Proyectos destacados home*/
+/* contacto */
+.contacto {
+  padding: 80px 0;
+  background-color: #000000;
+}
+.contacto__grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 50px;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .contacto__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+.contacto__imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.2);
+}
+.contacto .formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contacto .formulario .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contacto .formulario .form-group label {
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+.contacto .formulario .form-group input, .contacto .formulario .form-group textarea {
+  padding: 12px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: white;
+}
+.contacto .formulario .form-group input:focus, .contacto .formulario .form-group textarea:focus {
+  border-color: #8a2be2;
+  outline: none;
+}
+
+/* //contacto */
 /* Footer */
 footer {
   background-color: #000000;
@@ -612,6 +754,9 @@ textarea {
   }
   .herohome p {
     max-width: 95%;
+  }
+  .badge {
+    left: 10%;
   }
 } /* 768 a 991-Tablet*/
 @media (max-width: 767px) {
