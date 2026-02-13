@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Práctica 3</title>
+    <!--<link href="css/estilos.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+
+
+    <header class="encabezado-flexbox">
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="../assets/img/logo-planea-digital-2026_White.svg" alt="Planea Digital" class="logo-img">
+        </a>
+    </div>
+
+    <nav class="nav-principal">
+        <ul class="practica-flex">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a class="btn-active" href="#">Proyectos</a></li>
+            <li><a href="paquetes.html">Paquetes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header><!-- Cierre Header -->
+
+
+    <main>
+      
+        <div class="encabezados">
+        <h1>Proyectos</h1>
+        <h2>Una imagen vale más que mil palabras, una muestra de nuestras habilidades</h2>
+      </div>
+      
+      
+        
+<section class="proyectos">
+    <div class="container">
+        
+        
+        <div class="filtros">
+            <button class="btn-filtro active" data-filter="all">Todos</button>
+            <button class="btn-filtro" data-filter="web">Diseño Web</button>
+            <button class="btn-filtro" data-filter="seo">SEO</button>
+            <button class="btn-filtro" data-filter="apps">Apps</button>
+        </div>
+
+        <div class="proyectos__grid">
+            <div class="proyecto-item" data-category="web">
+                <img src="../assets/img/proyectos/carpeta-planea-digital-proyecto-Noel-schajris-online-shop.jpg" alt="Noel Scchajris Fan">
+                <div class="overlay"><span>Ver Proyecto</span></div>
+            </div>
+
+            <div class="proyecto-item" data-category="seo">
+                <img src="../assets/img/proyectos/carpeta-planea-digital-proyecto-xho-xhocolata.jpg" alt="Xho Xhocolata">
+                <div class="overlay"><span>Ver Proyecto</span></div>
+            </div>
+
+            <div class="proyecto-item" data-category="apps">
+                <img src="../assets/img/proyectos/app-nsmusic-mockup.jpg" alt="App NS Music, iOS, Android">
+                <div class="overlay"><span>Ver Proyecto</span></div>
+            </div>
+
+            <div class="proyecto-item" data-category="seo">
+                <img src="../assets/img/proyectos/carpeta-planea-digital-proyecto-Sun-persianas-diseno-online-shop.jpg" alt="Persianas Sun">
+                <div class="overlay"><span>Ver Proyecto</span></div>
+            </div>
+
+            <div class="proyecto-item" data-category="web">
+                <img src="../assets/img/proyectos/carpeta-planea-digital-proyecto-dance-life-studio.jpg" alt="Dance Life San Antonio Texas">
+                <div class="overlay"><span>Ver Proyecto</span></div>
+            </div>
+
+            <div class="proyecto-item" data-category="seo">
+                <img src="../assets/img/proyectos/carpeta-planea-digital-proyecto-accede-2025.jpg" alt="Accede Educación, Financiamiento Educativo">
+                <div class="overlay"><span>Ver Proyecto</span></div>
+            </div>
+
+
+            <div class="proyecto-item" data-category="web">
+                <img src="../assets/img/proyectos/carpeta-planea-digital-proyecto-tienda-en-linea-fundacion-bertha.jpg" alt="Fundación Bertha">
+                <div class="overlay"><span>Ver Proyecto</span></div>
+            </div>
+
+            <div class="proyecto-item" data-category="apps">
+                <img src="../assets/img/proyectos/carpeta-planea-digital-proyecto-WBA-Blindajes-Alemanes.jpg" alt="Blindajes Alemanes">
+                <div class="overlay"><span>Ver Proyecto</span></div>
+            </div>
+
+            <div class="proyecto-item" data-category="web">
+                <img src="../assets/img/proyectos/carpeta-planea-digital-proyecto-escuela-summerhill-azcapotzalco.jpg" alt="Escuela Summerhill Azcapotzalco">
+                <div class="overlay"><span>Ver Proyecto</span></div>
+            </div>
+
+            </div>
+
+    </div>
+</section><!-- proyectos -->
+
+      
+<!-- CTA Final de la página -->
+<section>
+<div class="container">
+        
+        <header class="especialidades__header">
+            <div class="header__left">
+                <span class="subtitulo">¿Te gusta lo que ves?</span>
+                <h2 class="titulo-seccion">Contáctanos <span class="resaltar">ahora</span></h2>
+                <p>Estaremos felices ayudarte a impulsar tu negocio.</p>
+            </div>
+            <div class="header__right">
+                <button><a href="contacto.html" target="_self">Envíanos un mensaje</a></button>
+            </div>
+        </header>
+
+        
+        </div>
+</section><!-- //CTA Final de la página -->
+
+    </main>
+
+      <footer>
+      
+      <p>Todos los derechos reservados Planea Digital 2026.</p>
+      <p>Las marcas registradas y logotipos aquí mostrados son propiedad de sus respectivos dueños y son utilizadas únicamente con fines enunciativos.</p>
+
+    </footer>
+    <!-- Cierre Footer -->
+    <!-- Cierre Footer -->
+  </body>
+
+  <script>
+    const filterButtons = document.querySelectorAll('.btn-filtro');
+const projectItems = document.querySelectorAll('.proyecto-item');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Cambiar clase active en botones
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        projectItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});
+  </script>
+
+
+</html>

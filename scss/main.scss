@@ -1,0 +1,760 @@
+/*@use './main.scss';*/
+@use './variables';
+@use './mixin';
+@use './base';
+@use './header';
+/*@use './responsive';*/
+
+@use './pages/index';
+@use './pages/top_anime';
+
+@use './reset/reset';
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body {
+  background-color: variables.$negro;
+  color: variables.$blanco;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: variables.$tipografia-encabezados;
+  margin: 15px 0;
+  font-weight: 800;
+  /*font-size: 40px;*/
+  text-transform: uppercase;
+  color: variables.$blanco;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: variables.$tipografia-encabezados;
+  margin: 15px 0;
+  font-weight: 800;
+  /*font-size: 40px;*/
+  text-transform: uppercase;
+  color: variables.$blanco;
+}
+
+h1 {
+  font-size: 44px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+
+h3 {
+  font-size: 36px;
+}
+
+
+h4, h5, h6 {
+  font-size: 30px;
+}
+
+p{
+    font-family: variables.$tipografia-body;
+    line-height: 1.7rem;
+    font-size: 1.1em;
+    color: variables.$blanco;
+}
+
+section {
+  padding: 55px 0;
+  border: variables.$borde-bajo;
+}
+
+.variante-texto {
+  font-size: .9rem;
+  font-weight: 600;
+  color: variables.$color-primario;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+section {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+div {
+  padding: 15px;
+}
+
+ol {
+  padding: 15px 10px 15px 45px;
+}
+
+img {
+  border-radius: 16px;
+}
+
+
+hr {
+  border: none;                
+  height: 1px;                 
+  background-color: #ccc;      
+  margin: 20px auto;   
+}
+
+
+button,
+#btnSubmit {
+  padding: 12px 18px;
+  color: variables.$blanco;
+  background-color: variables.$color-primario;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  box-shadow: 0px 27px 23px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover,
+#btnSubmit:hover{
+  color: variables.$color-secundario !important;
+  transition: 0.2s;
+}
+
+.radio-16 {
+  border-radius: variables.$corner-16;
+}
+
+
+/* Banner homepage */
+.herohome {
+  background-color: rgba(0, 0, 0, 0.35);
+  background-image: url(../assets/img/expertos-en-desarrollo-web-tiendas-en-linea.jpg);
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  padding: 5% 2%;
+  text-align: left;
+  color: azure;
+  min-height: 60vh;
+  border-bottom: variables.$borde-bajo;
+}
+
+
+.herohome h1, p {
+  max-width: 50vw;
+}
+
+.herohome h2 {
+  max-width: 30vw;
+  font-size: .8em;
+  line-height: 1em;
+  padding: 8px 12px;
+  border-radius: 25px;
+  border: solid #8d27f4 1px;
+  font-weight: 500;
+}
+
+
+
+/* Botón Home Hero*/
+.cta-hero {
+  color: variables.$blanco;
+}
+
+/* //Banner homepage */
+
+
+
+
+.resaltar {
+  color: variables.$color-primario;
+}
+
+
+.bggray {
+  background-color: #333;
+  color: #f4f4f4;
+  width: 100%;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.borde-separador {
+  border-bottom: variables.$borde-bajo;
+}
+
+
+
+/* Sección especialidades */
+
+
+
+.especialidades {
+    background-color: variables.$negro; // Usando tu variable ya arreglada
+    color: variables.$blanco;
+    padding: 80px 0;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    // Encabezado con Flexbox
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 60px;
+        gap: 40px;
+
+        .header__left {
+            flex: 2;
+            .subtitulo {
+                color: #8a2be2; // Tu color de acento púrpura
+                font-weight: bold;
+                letter-spacing: 2px;
+                font-size: 0.9rem;
+            }
+            .titulo-seccion {
+                font-size: 3rem;
+                margin-top: 10px;
+                line-height: 1.1;
+            }
+        }
+
+        .header__right {
+            flex: 1;
+            p {
+                color: #ccc;
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    // Rejilla con Grid
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // 3 columnas iguales
+        gap: 30px;
+    }
+}
+
+
+
+// Estilos de la Tarjeta (Card)
+.card {
+    background-color: #1a1a1a; // Un gris muy oscuro
+    padding: 40px;
+    border-radius: variables.$corner-16;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+        border-color: variables.$color-primario;
+    }
+
+    &__icon {
+        width: 60px;
+        height: 60px;
+        background-color: #2a1a3a;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: variables.$color-primario;
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+
+    p {
+        color: #aaa;
+        line-height: 1.6;
+    }
+}
+
+
+/* //Seeción especialidades */
+
+
+
+
+
+
+/* Interiores generales */
+
+.encabezados {
+  /*background: linear-gradient(
+    45deg,
+    rgba(15, 37, 110, 1) 12%,
+    rgba(7, 81, 179, 1) 84%
+  );
+  background-blend-mode: normal;
+  border-radius: 16px;*/
+  background-color: variables.$negro;
+  text-align: center;
+  margin: 25px 18px;
+}
+
+.encabezados h1 {
+  color: variables.$blanco;
+  text-transform: none;
+ 
+}
+
+.encabezados h2 {
+  color: variables.$tipografias-alternas;
+  text-transform: none;
+  font-size: 1.2em;
+  font-weight: 500;
+  
+}
+
+/* //Interiores generales */
+
+
+
+
+
+/* COMIENZA CSS BOX MODEL */
+
+.flexbox {
+border: solid 1px 8d27f4;
+background-color: variables.$gris-oscuro;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: stretch;
+gap: 15px;
+padding: 30px;
+margin: 30px;
+border-radius: 16px;
+}
+
+
+
+.caja-contacto {
+  border: solid 1px variables.$blanco;
+  background-color: variables.$negro;
+  /*display: inline-grid;*/
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  /*align-items: revert-layer;*/
+  gap: 15px;
+  padding: 30px;
+  margin: 30px;
+  border-radius: 16px;
+  color: variables.$blanco;
+}
+
+.tarjeta {
+  flex-direction: column;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  /*flex-basis: 200px;*/
+  text-align: left;
+  border-radius: 16px;
+  background-color: variables.$negro;
+  color: variables.$blanco;
+  justify-content: initial;
+  flex-wrap: wrap;
+}
+
+.tarjeta img {
+  max-width: 30%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 86%, 50% 87%, 23% 100%, 23% 86%, 0 86%);
+  /*border-radius: 16px;*/
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+
+.card-text {
+  color: variables.$negro;
+}
+
+
+/* TERMINA CSS BOX MODEL */
+
+
+
+
+/* Bootstrap page */
+
+.carousel-item h3 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: variables.$blanco;
+    text-transform: uppercase;
+    padding-left: 1vw;
+}
+
+.carousel-item p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: variables.$blanco;
+    text-transform: capitalize;
+    padding-left: 1vw;
+}
+
+.bg-black {
+  background-color: variables.$negro;
+}
+
+.bg-terciario {
+  background-color: variables.$color-terciario;
+}
+
+.bg-lightgrey {
+  background-color: #d1d1d1;
+}
+
+.card-paquetes {
+ background-color: #1a1a1a;
+    padding: 30px;
+    /*width: 23rem;*/
+    border-radius: variables.$corner-16;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+        border-color: variables.$color-primario;
+    }
+
+  
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        letter-spacing: 0px;
+    }
+
+    p {
+        color: variables.$tipografias-alternas;
+        line-height: 1.6;
+    }
+}
+
+
+/*
+.bg-red {
+  background-color: red;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.bg-violet {
+  background-color: violet;
+}
+*/
+
+.carrubg1 {
+    background-image: url(../assets/img/ch-fondo-01.jpg);
+}
+
+.carrubg2 {
+    background-image: url(../assets/img/ch-fondo-02.jpg);
+}
+
+.carrubg3 {
+    background-image: url(../assets/img/ch-fondo-03.jpg);
+}
+.carrubgsize {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-title {
+  color: variables.$color-primario;
+  font-size: 1.6em;
+  text-wrap: wrap;
+}
+
+
+
+
+/* Header BS */
+
+.logo {
+    max-width: 180px;
+}
+
+.bg-body-tertiary {
+  background-color: variables.$negro !important;
+}
+
+.navbar-nav {
+  --bs-nav-link-color: variables.$blanco !important;
+  --bs-nav-link-hover-color: variables.$color-primario !important;
+  --bs-nav-link-disabled-color: variables.$gris-oscuro !important;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color:variables.$color-primario !important;
+}
+
+.navbar-toggler-icon {
+  background-color: variables.$gris-medio !important;
+  border-radius: variables.$corner-3;
+}
+.dropdown-menu {
+  background-color: variables.$gris-oscuro;
+}
+.dropdown-item {
+  color: variables.$blanco ;
+}
+
+/* // Termina css Bootstrap page */
+
+
+
+/* Proyectos CSS */
+
+
+.proyectos {
+    padding: 80px 0;
+    background-color: variables.$negro;
+
+    .filtros {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 40px;
+
+        .btn-filtro {
+            background: transparent;
+            color: variables.$blanco;
+            border: 1px solid #333;
+            padding: 10px 25px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 5px;
+
+            &.active, &:hover {
+                background-color: #8a2be2;
+                border-color: #8a2be2;
+            }
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // 3 columnas fijas
+        gap: 20px;
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr); // 2 en tablet
+        }
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr; // 1 en móvil
+        }
+    }
+}
+
+.proyecto-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    aspect-ratio: 4 / 3; // Mantiene todas las fotos del mismo tamaño
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+    
+    &.hidden { display: none; } // Clase para el filtro
+}
+
+/* //termina proyectos CSS*/
+
+
+/* Footer */
+footer {
+  background-color: variables.$negro;
+  font-size: .75em;
+  text-align: center;
+  padding: 25px 30px;
+  color: variables.$tipografias-alternas;
+}
+
+
+footer p {
+  min-width: 90vw;
+}
+/* //Termina Footer */
+
+
+
+.imagenhome {
+    max-width: 25%;
+    border-radius: 16px;
+  }
+
+  textarea {
+  width: 100%;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*    RESPONSIVOS
+/*-----------------------------------------------------------------------------------*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+   .imagenhome {
+    max-width: 40%;
+  }
+
+.herohome p {
+  max-width: 95%;
+}
+
+  
+} /* 768 a 991-Tablet*/
+
+
+
+
+
+@media (max-width: 767px) {
+
+  /*cajas especialidades */
+ .especialidades__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .especialidades__grid {
+        grid-template-columns: 1fr; // Una sola columna en móvil
+    }
+    /* termina cajas especialidades*/
+
+}
+
+
+
+
+@media (max-width: 479px) {
+
+  img {
+    max-width: 90%;
+  }
+  .imagenhome {
+    max-width: 90%;
+  }
+
+
+.flexbox {
+  flex-direction: column;
+}
+
+
+.carousel-item h3 {
+  font-size: 1.3rem;
+}
+
+.carousel-item p {
+  font-size: .8rem;
+}
+
+h1, h3, h3 {
+  font-size: 24px;
+}
+
+ .titulo-seccion {
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+
+/* hero home móvil */
+
+.herohome {
+  padding:  25px 15px 0px 15px;
+  background-position: 0px 160px; 
+
+}
+
+.herohome h1 {
+    font-size: 1.8em;
+    line-height: 1.4em;
+    max-width: 90vw;
+}
+.herohome h2 {
+  font-size: .82em;
+  font-weight: 400;
+  border: solid 1px #bf82fc;
+  border-radius: variables.$corner-25;
+  max-width: 70vw;
+      padding: 7px 15px;
+
+}
+
+.herohome p {
+  font-size: 1em;
+  max-width: 90vw;
+}
+
+/* Botón Home Hero*/
+.cta-hero {
+  font-size: .85em;
+}
+/* termina hero home móvil*/
+
+ .titulo-seccion {
+    line-height: 1.2em !important;
+    font-size: 2em !important;
+  }
+
+
+} /*479 móviles*/
+
+
+
+/*
+@media (max-width: 992px) {
+   
+}*/
+
+
+

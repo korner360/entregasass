@@ -1,0 +1,396 @@
+
+/*
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+  background-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+h1, h2 {
+  font-family: $tipografia-encabezados;
+  margin: 15px 0;
+  font-weight: 900;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+p{
+    font-family: $tipografia-body;
+    line-height: 1.7rem;
+    font-size: 1.1em;
+}
+section {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+div {
+  padding: 15px;
+}
+
+ol {
+  padding: 15px 10px 15px 45px;
+}
+
+img {
+  border-radius: 16px;
+}
+
+button,
+#btnSubmit {
+  padding: 12px 18px;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  box-shadow: 0px 27px 23px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  color: powderblue;
+  transition: 0.2s;
+}
+
+#btnSubmit:hover {
+  color: powderblue;
+  transition: 0.2s;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.btn-active {
+  background: black;
+  padding: 8px 10px;
+  border-radius: 5px;
+  text-transform: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+.herohome {
+  background-color: rgba(0, 0, 0, 0.35);
+  background-image: url(../assets/img/hero.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-blend-mode: overlay;
+  padding: 35px;
+  text-align: left;
+  color: azure;
+  min-height: 40vh;
+}
+
+.herohome h1 {
+  font-size: 44px;
+}
+.herohome h2 {
+  font-size: 1.4em;
+}
+
+.herohome p {
+  font-size: 1.2em;
+  max-width: 45%;
+}
+
+.cta-hero {
+  color: #d1d1d1;
+}
+
+
+.bggray {
+  background-color: #333;
+  color: #f4f4f4;
+  width: 100%;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.encabezados {
+  background: linear-gradient(
+    45deg,
+    rgba(15, 37, 110, 1) 12%,
+    rgba(7, 81, 179, 1) 84%
+  );
+  background-blend-mode: normal;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.encabezados h1 {
+  color: #ffffff;
+}
+
+hr {
+  border: none;                /* Elimina el borde por defecto */
+  height: 1px;                 /* Grosor de la línea */
+  background-color: #ccc;      /* Color de la línea */              /* Ancho */
+  margin: 20px auto;   
+}
+
+/* COMIENZA CSS BOX MODEL */
+
+.flexbox {
+border: solid 1px #ccc;
+background-color: #f4f4f4;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: stretch;
+gap: 15px;
+padding: 30px;
+margin: 30px;
+border-radius: 16px;
+}
+
+.flex-interior {
+
+}
+
+.caja-contacto {
+  border: solid 1px #ccc;
+  background-color: #000;
+  display: inline-grid;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: revert-layer;
+  gap: 15px;
+  padding: 30px;
+  margin: 30px;
+  border-radius: 16px;
+  color: white;
+}
+
+.tarjeta {
+  flex-direction: column;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  /*flex-basis: 200px;*/
+  text-align: center;
+  border-radius: 16px;
+  background-color: black;
+  color:white;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.tarjeta img {
+  max-width: 20%;
+  border-radius: 16px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+// Variables (Ponlas en tu archivo _variables.scss)
+$bg-header: #f4f4f4;
+$sombra: 0px 4px 16px rgba(0, 0, 0, 0.08); // Corregí el spread para que sea sutil abajo
+
+.encabezado-flexbox {
+    background-color: $bg-header;
+    margin-bottom: 25px;
+    box-shadow: $sombra;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+    // Aquí ocurre la magia de Flexbox para separar Logo de Menú
+    display: flex;
+    justify-content: space-between; // Logo a la izq, Nav a la der
+    align-items: center; 
+    padding: 10px 5%; // Espaciado lateral para que no pegue a los bordes
+
+    .logo-container {
+        .logo-img {
+            height: 50px; // Ajusta según el tamaño de tu logo
+            width: auto;
+            display: block;
+        }
+    }
+
+    .nav-principal {
+        .practica-flex {
+            display: flex;
+            list-style: none;
+            gap: 20px; // Espacio moderno entre botones sin usar margins raros
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+
+            li a {
+                text-decoration: none;
+                color: #333;
+                font-weight: 500;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: #007bff; // Color de acento
+                }
+                
+                &.btn-active {
+                    color: #007bff;
+                    border-bottom: 2px solid #007bff;
+                }
+            }
+        }
+    }
+}
+
+/*.encanezado-flexbox{
+  background-color: #f4f4f4;
+  margin-bottom: 25px;
+  box-shadow:0px -6px 16px 18px rgba(0, 0, 0, 0.08);
+  position: sticky;
+}
+
+.practica-flex {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 25px 18px;
+  align-items: row;
+  list-style: none;
+  flex-wrap: wrap;
+}*/
+
+/* TERMINA CSS BOX MODEL */
+
+
+
+/* Bootstrap page */
+
+.carousel-item h3 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding-left: 1vw;
+}
+
+.carousel-item p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: capitalize;
+    padding-left: 1vw;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-lightgrey {
+  background-color: #d1d1d1;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.bg-violet {
+  background-color: violet;
+}
+
+.carrubg1 {
+    background-image: url(../assets/img/ch-fondo-01.jpg);
+}
+
+.carrubg2 {
+    background-image: url(../assets/img/ch-fondo-02.jpg);
+}
+
+.carrubg3 {
+    background-image: url(../assets/img/ch-fondo-03.jpg);
+}
+.carrubgsize {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    max-width: 80px;
+}
+/* //Bootstrap page */
+
+
+.imagenhome {
+    max-width: 25%;
+    border-radius: 16px;
+  }
+
+  textarea {
+  width: 100%;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*    RESPONSIVOS
+/*-----------------------------------------------------------------------------------*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+   .imagenhome {
+    max-width: 40%;
+  }
+
+     .herohome p {
+  max-width: 95%;
+}
+
+
+  
+} /* 78 a 991-Tablet*/
+
+
+@media (max-width: 767px) {
+
+
+}
+
+
+@media (max-width: 479px) {
+  img {
+    max-width: 90%;
+  }
+  .imagenhome {
+    max-width: 90%;
+  }
+
+   .herohome p {
+  font-size: 1.1em;
+  max-width: 97%;
+}
+
+.flexbox {
+  flex-direction: column;
+}
+
+
+
+} /*479 móviles*/

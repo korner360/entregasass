@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootrstap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+
+  <body>
+
+<!--<nav>
+    <ul class="nav navbar-nav">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="./pages/conocenos.html">Conócenos</a></li>
+                <li><a href="./pages/servicios.html">Servicios</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+                <li><a href="./pages/boxmodel.html">BoxModel</a></li>
+                <li><a href="./pages/bootstrap.html">Bootstrap</a></li>
+
+    <li><a class="button" href="#">Comprar ahora</a></li>
+    </ul>
+</nav>
+-->
+
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../index.html"><img class="logo" src="../assets/img/logo-planea-digital-2026_White.png" alt="Volver al home de Planea Digital desde la página hecha con Bootrstap"></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="proyectos.html">Proyectos</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Otras páginas
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="servicios.html">Servicios</a></li>
+            <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+            <!--<li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Boxodel</a></li>-->
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-disabled="true">Paquetes</a>
+        </li>
+
+      </ul>
+
+      <!-- <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form> -->
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- carrusel BS -->
+
+<section class="container-fluid bg-black">
+<div id="carouselExampleIndicators" class="carousel slide">
+
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item carrubg1 carrubgsize active">
+
+      <div class="row">
+      <div class="col-3"><img src="../assets/img/bolbasaur.png" class="d-block w-20" alt="Poke 1"></div>
+      <div class="col-9"><h3>Este es el Slide 1</h3>
+      <p>Nos gusta  mucho</p></div>
+    </div><!--row-->
+
+    </div>
+
+    <div class="carousel-item carrubg2 carrubgsize">
+
+      <div class="row">
+      <div class="col-3"><img src="../assets/img/mew.png" class="d-block w-20" alt="Poke 2"></div>
+      <div class="col-9"><h3>Este es el Slide 2</h3>
+      <p>Nos gusta  mucho</p></div>
+    </div><!--row-->
+    
+    </div>
+
+    <div class="carousel-item carrubg3 carrubgsize">
+      
+      <div class="row">
+      <div class="col-3"><img src="../assets/img/squirtle.png" class="d-block w-20" alt="Poke 3"></div>
+      <div class="col-9"><h3>Este es el Slide 1</h3>
+      <p>Nos gusta  mucho</p></div>
+    </div><!--row-->
+    
+    </div>
+  </div><!--Carrusel Inner-->
+
+  
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</section>
+<!-- Termina Carrusel BS -->
+
+ 
+<!--cajas-->
+
+ <div class="encabezados">
+        <h1>Nuestros paquetes</h1>
+        <h2>La mejor decisión para potenciar tu negocio</h2>
+      </div>
+      
+    <section class="container-fluid">
+      <div class=" row col-12 p-5">
+
+       
+
+        <div class="col-lg-5 col-12  bg-terciario p-5 radio-16">
+
+          <h3>¿Por qué es importante?</h3>
+          <p>En el mercado actual, la digitalización no es una opción de lujo, sino el pilar fundamental para la supervivencia y escalabilidad de cualquier empresa.</p>
+            
+            <p>Al integrar herramientas avanzadas de marketing y ventas, dejas de esperar clientes para comenzar a encontrarlos de forma predecible y medible.
+              Un ecosistema digital optimizado —desde un eCommerce de alto rendimiento hasta una estrategia de SEO sólida— permite que tu negocio trabaje las 24 horas,
+              eliminando fronteras geográficas y convirtiendo datos en decisiones rentables.
+              
+              <p>Dar el paso hacia lo digital es asegurar que tu marca no solo sea visible,
+              sino que lidere la conversación en un entorno cada vez más competitivo.</p>
+</div>
+
+
+        <div class="col-lg-7 col-12 text-light p-5">
+          <h3>¿Para quién va dirigido?</h3>
+          <p>Nuestras soluciones están diseñadas para visionarios que entienden que el entorno digital es el motor principal de la economía moderna.</p>
+          <p>
+            Trabajamos con emprendedores y dueños de negocio que buscan trascender los límites físicos, marcas en crecimiento que necesitan un canal de
+            eCommerce robusto y automatizado para escalar sus ventas, y empresas consolidadas que requieren una optimización estratégica de su presencia
+            online mediante SEO y marketing de datos.</p>
+            <p>Si tu objetivo es dejar de ser un espectador y convertirte en un referente digital en tu industria,
+            Planea Digital es el aliado técnico y creativo que llevará tu proyecto al siguiente nivel.
+            </p>
+            <img class="img-fluid" src="../assets/img/expertos-en-desarrollo-web-tiendas-en-linea.jpg" alt="Somos expertos en diseño web, tiendas en línea y SEO">
+
+</div>
+      
+    </section>
+
+
+    <!--Tarjetas-->
+    <section>
+
+      <div class="encabezados">
+        <h1>Nuestros paquetes</h1>
+        <h2>La mejor decisión para potenciar tu negocio</h2>
+      </div>
+
+
+      <div class="row">
+
+         <div class="col-lg-4 col-12  mb-2">
+        <div class="card-paquetes">
+  <img src="../assets/img/squirtle.png" class="card-img-top" alt="No soy el vamoacalmarlo... el vamoacalmarno">
+  <div class="card-body">
+    <h5 class="card-title">El vamoacalmarno</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="contacto.html" class="btn btn-primary">¡Quiero detalles!</a>
+  </div>
+</div>
+      </div>
+
+      <div class="col-lg-4 col-12 mb-2">
+        <div class="card-paquetes" >
+  <img src="../assets/img/bolbasaur.png" class="card-img-top" alt="Conoce a Bolbasaur">
+  <div class="card-body">
+    <h5 class="card-title">El bolbasaur</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="contacto.html" class="btn btn-primary">¡Quiero detalles!</a>
+  </div>
+</div>
+      </div>
+
+
+       <div class="col-lg-4 col-12  mb-2">
+        <div class="card-paquetes" >
+  <img src="../assets/img/mew.png" class="card-img-top" alt="soy un pokemon poderoso">
+  <div class="card-body">
+    <h5 class="card-title">El Mew</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="contacto.html" class="btn btn-primary">¡Quiero detalles!</a>
+  </div>
+</div>
+      </div>
+
+
+      
+      </div><!-- //row -->
+    </section> <!-- //tarjetas -->
+
+    <!-- CTA Final de la página -->
+<section>
+<div class="container">
+        
+        <header class="especialidades__header">
+            <div class="header__left">
+                <span class="subtitulo">¿Te gusta lo que ves?</span>
+                <h2 class="titulo-seccion">Contáctanos <span class="resaltar">ahora</span></h2>
+                <p>Estaremos felices ayudarte a impulsar tu negocio.</p>
+            </div>
+            <div class="header__right">
+                <button><a href="contacto.html" target="_self">Envíanos un mensaje</a></button>
+            </div>
+        </header>
+
+        
+        </div>
+</section><!-- //CTA Final de la página -->
+
+
+      <footer>
+      
+      <p>Todos los derechos reservados Planea Digital 2026.</p>
+      <p>Las marcas registradas y logotipos aquí mostrados son propiedad de sus respectivos dueños y son utilizadas únicamente con fines enunciativos.</p>
+
+    </footer>
+    <!-- Cierre Footer -->
+
+
+<!--
+<footer class="bggray p-0">
+  <div class="row">
+
+    <div class="col-12 sm-col-12">
+      <p>Todos los derechos reservados Planea Digital 2026.</p>
+      <p>Las marcas registradas y logotipos aquí mostrados son propiedad de sus respectivos dueños y son utilizadas únicamente con fines enunciativos.</p>
+
+    </div>
+  </div>
+</footer>-->
+
+
+
+    <!-- Scripts BS5 -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
