@@ -775,6 +775,13 @@ textarea {
   .flexbox {
     flex-direction: column;
   }
+  section {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .proyectos-destacados {
+    padding: 20px !important;
+  }
   .carousel-item h3 {
     font-size: 1.3rem;
   }
@@ -803,12 +810,12 @@ textarea {
     font-weight: 400;
     border: solid 1px #bf82fc;
     border-radius: 25px;
-    max-width: 70vw;
+    max-width: 70vw !important;
     padding: 7px 15px;
   }
   .herohome p {
     font-size: 1em;
-    max-width: 90vw;
+    max-width: 90vw !important;
   }
   /* Botón Home Hero*/
   .cta-hero {
@@ -818,6 +825,9 @@ textarea {
   .titulo-seccion {
     line-height: 1.2em !important;
     font-size: 2em !important;
+  }
+  .proyectos-destacados {
+    padding: 30px;
   }
 } /*479 móviles*/
 /*
