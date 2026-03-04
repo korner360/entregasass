@@ -153,7 +153,8 @@ button:hover,
 }
 
 
-.herohome h1, p {
+.herohome h1,
+.herohome p {
   max-width: 50vw;
 }
 
@@ -208,7 +209,7 @@ button:hover,
     padding: 80px 0;
 
     .container {
-        max-width: 1200px;
+        /*max-width: 1200px;*/
         margin: 0 auto;
         padding: 0 20px;
     }
@@ -262,6 +263,7 @@ button:hover,
     border-radius: variables.$corner-16;
     border: 1px solid #333;
     transition: transform 0.3s ease;
+    margin-bottom: 45px;
 
     &:hover {
         transform: translateY(-10px);
@@ -798,6 +800,25 @@ footer p {
 
 
 
+/* ==========================================
+   UNIFICAR MÁRGENES LATERALES DESKTOP
+   Referencia: .proyectos-destacados
+========================================== */
+
+@media (min-width: 992px) {
+
+  section,
+  .herohome,
+  .especialidades,
+  .proyectos,
+  .contacto {
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+  }
+
+}
+
+
 
 /*-----------------------------------------------------------------------------------*/
 /*    RESPONSIVOS
@@ -820,6 +841,19 @@ footer p {
 .badge {
       left: 10%;
     }
+
+    .card {
+
+    padding: 25px;
+    margin-bottom: 60px;
+    }
+
+
+    .flexbox {
+  /*display: flex;*/
+  flex-direction: column;
+
+}
   
 } /* 768 a 991-Tablet*/
 
@@ -839,7 +873,12 @@ footer p {
         grid-template-columns: 1fr; // Una sola columna en móvil
     }
     /* termina cajas especialidades*/
+  .card {
 
+    padding: 25px;
+    margin-bottom: 20px;
+    }
+    
     
 }
 
@@ -882,10 +921,10 @@ h1, h3, h3 {
   font-size: 24px;
 }
 
- .titulo-seccion {
+ /*.titulo-seccion {
   font-size: 1rem;
   line-height: 1.1;
-}
+}*/
 
 
 /* hero home móvil */
@@ -924,12 +963,17 @@ h1, h3, h3 {
 
  .titulo-seccion {
     line-height: 1.2em !important;
-    font-size: 2em !important;
+    font-size: 1.8em !important;
   }
 
 
   .proyectos-destacados {
   padding: 30px;
+}
+
+.herohome h1,
+.herohome p {
+  max-width: 80vw;
 }
 
 } /*479 móviles*/

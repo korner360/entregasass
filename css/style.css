@@ -200,7 +200,8 @@ button:hover,
   border-bottom: solid #333 1px;
 }
 
-.herohome h1, p {
+.herohome h1,
+.herohome p {
   max-width: 50vw;
 }
 
@@ -243,7 +244,7 @@ button:hover,
   padding: 80px 0;
 }
 .especialidades .container {
-  max-width: 1200px;
+  /*max-width: 1200px;*/
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -287,6 +288,7 @@ button:hover,
   border-radius: 16px;
   border: 1px solid #333;
   transition: transform 0.3s ease;
+  margin-bottom: 45px;
 }
 .card:hover {
   transform: translateY(-10px);
@@ -740,6 +742,20 @@ textarea {
   width: 100%;
 }
 
+/* ==========================================
+   UNIFICAR MÁRGENES LATERALES DESKTOP
+   Referencia: .proyectos-destacados
+========================================== */
+@media (min-width: 992px) {
+  section,
+  .herohome,
+  .especialidades,
+  .proyectos,
+  .contacto {
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+  }
+}
 /*-----------------------------------------------------------------------------------*/
 /*    RESPONSIVOS
 /*-----------------------------------------------------------------------------------*/
@@ -753,6 +769,14 @@ textarea {
   .badge {
     left: 10%;
   }
+  .card {
+    padding: 25px;
+    margin-bottom: 60px;
+  }
+  .flexbox {
+    /*display: flex;*/
+    flex-direction: column;
+  }
 } /* 768 a 991-Tablet*/
 @media (max-width: 767px) {
   /*cajas especialidades */
@@ -764,6 +788,10 @@ textarea {
     grid-template-columns: 1fr;
   }
   /* termina cajas especialidades*/
+  .card {
+    padding: 25px;
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 479px) {
   img {
@@ -791,10 +819,10 @@ textarea {
   h1, h3, h3 {
     font-size: 24px;
   }
-  .titulo-seccion {
+  /*.titulo-seccion {
     font-size: 1rem;
     line-height: 1.1;
-  }
+  }*/
   /* hero home móvil */
   .herohome {
     padding: 25px 15px 0px 15px;
@@ -824,10 +852,14 @@ textarea {
   /* termina hero home móvil*/
   .titulo-seccion {
     line-height: 1.2em !important;
-    font-size: 2em !important;
+    font-size: 1.8em !important;
   }
   .proyectos-destacados {
     padding: 30px;
+  }
+  .herohome h1,
+  .herohome p {
+    max-width: 80vw;
   }
 } /*479 móviles*/
 /*
